@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .left-bar {
+            background-color: #f4f4f4;
+            width: 250px;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            height: calc(100vh - 60px); /* Adjust based on top-bar height */
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #e9ecef;
+            overflow-y: auto;
+        }
+
+        .left-bar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-bar ul li {
+            margin: 10px 0;
+        }
+
+        .left-bar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+        }
+
+        .left-bar ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        Dashboard
+    </div>
+    <div class="main-container">
+        <div class="left-bar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Welcome to the Dashboard</h1>
+            <p>This is where the main content goes. You can add widgets, charts, tables, or other components here to build out your dashboard.</p>
+        </div>
+    </div>
+</body>
+</html>

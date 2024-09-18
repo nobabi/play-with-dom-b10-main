@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame Content</title>
+</head>
+
+<body>
+    <h1 id="fruitOption">Add some fruits here</h1>
+
+    <script>
+        const fruits = ["Mango", "Apple", "Grape", "Jackfruit"];
+
+
+        let concateFruits = '';
+        for (let i = 0; i < fruits.length; i++) {
+            if (i == fruits.length - 1) {
+                concateFruits += fruits[i];
+
+            }
+            else{
+                concateFruits +=fruits[i] + ","
+            }
+
+
+        }
+
+        document.getElementById("fruitOption").innerText=concateFruits;
+
+    </script>
+</body>
+
+</html>

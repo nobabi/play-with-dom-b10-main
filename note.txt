@@ -1,0 +1,9 @@
+InnerText-- final out ja se dekte pabe seta deber
+InnerContext---text jaace ti dbe 
+InnerHtml
+Traversing Of DOM
+parentNode
+Selecting Elements by ID: You can select an element by its unique ID using the getElementById method. This allows you to access and manipulate the properties of that element.
+Selecting Elements by Tag Name: To select all elements with a specific tag name, you can use the getElementsByTagName method. This is useful when you want to work with multiple elements of the same type.
+Selecting Elements by Class Name: If you want to select elements by their CSS class, you can use the getElementsByClassName method. This is helpful for targeting elements with a specific class for styling or interaction.
+Traversing Parent, Child, and Sibling Elements: JavaScript provides various properties like parentNode, childNodes, nextSibling, and previousSibling to traverse the DOM tree. These properties allow you to move between related elements in the hierarchy.

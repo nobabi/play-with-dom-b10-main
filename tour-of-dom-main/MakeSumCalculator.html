@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFrame Content</title>
+</head>
+<body>
+
+  <h1>Result: <span id="result"></span></h1>
+  
+  <input id="field1"></input>
+  <input id="field2"></input>
+  <input id="field3"></input>
+
+  <button id="addButton">Add</button>
+
+<script>
+    let inputField1 = document.getElementById("field1");
+    let inputField2 = document.getElementById("field2");
+let inputField3 = document.getElementById("field3");
+const addButton = document.getElementById("addButton");
+let resultContainer = document.getElementById("result");
+
+addButton.addEventListener("click",()=>{
+  
+ 
+  const value1 = parseInt(inputField1) || 0;
+    const value2 = parseInt(inputField2) || 0;
+    const value3 = parseInt(inputField3) || 0;
+
+    // Calculate the sum
+    const resultContainer = value1 + value2 + value3;
+
+    // Display the result
+    document.getElementById("result").innerText = "Sum: " + resultContainer;
+  
+})
+
+  </script>
+</body>
+</html>

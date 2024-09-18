@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-btn-primary{
+            color: red;
+            font-size: large;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Play With dom</h1>
+
+    <div class="container">
+        <p class="info">This is paragraphsdasfdasfsa</p>
+        <p class="info">This is paragraph</p>
+        <p class="info">This is paragraph</p>
+        <p id="unique-para">This is paragraph</p>
+      </div>
+
+      <div class="container3">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 2</li>
+      </div>
+
+
+      
+  
+</body>
+
+<script>
+    let tag = document.getElementById("h1")
+    tag.style.color = "red";
+    tag.style.border="2px solid black";
+    tag.style.textAlign="center";
+    tag.style.backgroundColor="orange";
+    tag.style.fontStyle="italic";
+     let innerTextt = tag.innerText;
+    
+     let classSelector = document.getElementsByClassName('info');
+     for(let i =0; i<classSelector.length; i++)
+     {
+     
+     
+
+     if(i %2== 1) {
+        classSelector[i].style.backgroundColor = "red";
+        classSelector[i].style.border="1px solid black";
+    } else {
+        classSelector[i].style.backgroundColor = "orange";
+    }
+
+     }
+    //  console.log(classSelector);
+
+    let removeOrderList = document.querySelectorAll(".container3 li");
+//     removeOrderList.forEach((item,index)=>{
+//     `${index+1}:`
+
+
+//   });
+//      console.log(removeOrderList);
+
+
+// const itemTwo = document.getElementById("item2");
+
+
+
+const itemTwo = document.getElementById("item2");
+const parent =itemTwo.parentElement;
+parent.style.border="1px solid red";
+parent.
+console.log('Parent Element:', parent);
+
+
+ 
+</script>
+
+
+<button id="myButton">Click Me</button>
+<a href="www.twitter.com" id="myLink" target="_blank" title="Go To Example"
+  >Go Here</a
+>
+
+
+<script>
+
+    /*const myBtn = document.getElementById("myButton");
+myBtn.setAttribute("class", "btn btn-primary");
+myBtn.setAttribute("disabled", true);
+myBtn.setAttribute("id", "myid");
+myBtn.removeAttribute("disabled");
+const myLink = document.getElementById("myLink");
+const link = myLink.getAttribute("href");
+*/
+    let button = document.getElementById("myButton");
+    button.setAttribute("class","btn-btn-primary");
+    button.setAttribute("disabled",true)
+    button.setAttribute("id","myid");
+    button.removeAttribute("disabled");
+    const myLink = document.getElementById("myLink");
+    const link = myLink.getAttribute("target");
+    console.log(link);
+  
+</script>
+    <div class="container5">
+    <h1>Dynamic Element creation and class manipulation</h1>
+  </div>
+  <script>
+    let p = document.createElement("h1");
+        p.innerText="Welcome Bangladesh";
+        console.log(p);
+     
+    //    let container1= document.getElementsByClassName("container5")[0];
+       const container1 = document.querySelector(".container5");
+    //    container.appendChild(p);
+
+       container1.appendChild(p);
+  </script>
+
+</html>

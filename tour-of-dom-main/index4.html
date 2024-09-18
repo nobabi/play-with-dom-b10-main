@@ -1,0 +1,120 @@
+<!-- 
+ 
+1. Selecting Elements by ID
+You can select an element by its unique ID using the getElementById method. Here’s an example:
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>DOM Traversal Example</title>
+    <style>
+        .highlight {
+
+            background-color: yellow;
+
+        }
+    </style>
+    </style>
+
+</head>
+
+<body>
+
+    <div id="myDiv">This is a div element with ID ‘myDiv'</div>
+
+    <script>
+
+        // Select the element by its ID
+
+        const myElement = document.getElementById("myDiv");
+
+        // console.log(myElement.textContent); // Output: This is a div element with ID ‘myDiv’
+
+    </script>
+
+    <!-- 2. You can select all elements with a specific tag name using getElementsByTagName. Here’s an example: -->
+    <ul>
+
+        <li>Item 1</li>
+
+        <li>Item 2</li>
+
+        <li>Item 3</li>
+
+    </ul>
+
+    <script>
+
+        // Select all <li> elements
+
+        const listItems = document.getElementsByTagName("li");
+
+        for (let i = 0; i < listItems.length; i++) {
+
+            // console.log(listItems[i].textContent);
+
+        }
+
+        // Output: Item 1, Item 2, Item 3
+
+    </script>
+
+    <!-- 3. Selecting Elements by Class Name
+You can select elements by their CSS class using getElementsByClassName. Here’s an example: -->
+
+<p class=”highlight”>This paragraph is highlighted.</p>
+
+<p>This paragraph is not highlighted.</p>
+
+<script>
+
+    // Select elements with the class “highlight”
+
+    const highlightedElements = document.getElementsByClassName('highlight');
+
+    for (let i = 0; i < highlightedElements.length; i++) {
+
+
+        highlightedElements[i].style.color = "red"; // Change text color
+
+    }
+
+</script>
+
+<!-- 4. Traversing Parent, Child, and Sibling Elements
+You can traverse the DOM tree using properties like parentNode, childNodes, firstChild, lastChild, nextSibling, and previousSibling. Here’s -->
+
+<ul>
+
+    <li>Item 1</li>
+
+    <li>Item 2</li>
+
+    <li>Item 3</li>
+
+</ul>
+
+<script>
+
+    const ulElement = document.querySelector("ul");
+
+    const firstListItem = ulElement.firstChild; // Gets the first <li> element
+
+    const nextListItem = firstListItem.nextSibling; // Gets the next <li> element
+
+
+    console.log(firstListItem.textContent); // Output: Item 1
+
+
+    console.log(nextListItem.textContent); // Output: Item 2
+
+</script>
+
+</body>
+
+</html>

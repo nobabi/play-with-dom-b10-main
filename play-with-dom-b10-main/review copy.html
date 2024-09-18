@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <h1 class="text-3xl text-center my-5 font-bold">Dekko Lit</h1>
+    <div class="w-[80%] text-center mx-auto mb-8">
+      <textarea id="text-area" placeholder="Leave a review" class="textarea mx-auto textarea-bordered textarea-lg w-96" name="" id=""></textarea>
+      <div class="text-end w-[45%] mx-auto">
+        <button id="submit-btn" class="btn btn-success btn-sm">Submit</button>
+        <button id="Clear-btn" class="btn btn-danger btn-sm">Clear</button>
+
+      </div>
+
+    </div>
+    <div id="review" class="user-review w-96 mx-auto border border-red-500">
+      <h1 class="text-3xl font-bold text-red-600">User Review</h1>
+
+    </div>
+
+    <script>
+    
+      let createPlaceHolder =null;
+      
+      let bntSubmit =document.getElementById("submit-btn");
+      bntSubmit.addEventListener("click",function(){
+        let inputValue= document.getElementById("text-area");
+         createPlaceHolder= document.createElement("li");
+        createPlaceHolder.innerText=inputValue.value;
+         ReviewText = document.getElementById('review');
+        ReviewText.appendChild(createPlaceHolder);
+        console.log(ReviewText);
+      
+      });
+    
+
+      let btnClear = document.getElementById("Clear-btn");
+// Get the parent container that holds the <li> elements
+let parentContainer = document.getElementById("review"); // Replace 'list-container' with the actual ID or class of the parent container
+
+btnClear.addEventListener("click", function() {
+    // Clear all <li> elements by removing the innerHTML of the parent
+    parentContainer.innerHTML = '';
+    alert("All list items have been removed");
+});
+
+
+    
+    </script>
+    
+  </body>
+</html>

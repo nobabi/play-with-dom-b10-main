@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Sibling Example</title>
+    <style>
+        div {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="first-div">First Div</div>
+    <p>This is a paragraph between divs.</p>
+    <div id="second-div">Second Div</div>
+    <div id="third-div">Third Div</div>
+
+    <script>
+        // Select the first div
+        const firstDiv = document.getElementById('first-div');
+
+        // Get the next element sibling (skipping text nodes)
+        const nextDiv = firstDiv.nextElementSibling;
+
+        // Check and display the next sibling
+        console.log(nextDiv); // Outputs: <p>This is a paragraph between divs.</p>
+        nextDiv.style.backgroundColor = 'red'; // Highlight the next sibling
+
+        // Move to the next sibling of the paragraph (which will be the second div)
+        const secondDiv = nextDiv.nextElementSibling;
+        console.log(secondDiv); // Outputs: <div id="second-div">Second Div</div>
+        secondDiv.style.backgroundColor = 'lightblue'; // Highlight the second div
+    </script>
+</body>
+</html>
